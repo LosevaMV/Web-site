@@ -1,0 +1,216 @@
+.header-info {
+	background-color: #f2f2f2;
+	padding: 10px 0;
+	text-align: center;
+}
+
+.social-links,
+.footer {
+	text-align: center;
+	background-color: #f2f2f2;
+	color: #333;
+}
+
+.social-links a,
+.footer a {
+	margin: 10px 0;
+	text-decoration: none;
+	color: #333;
+}
+
+.main-content {
+    margin-bottom: 50px; /* Установка отступа перед футером */
+}
+
+.footer {
+    padding: 20px 0;
+    border-top: 1px solid #e7e7e7;
+    background-color: #f2f2f2;
+    color: #333;
+    text-align: center;
+    margin-top: 50px; /* Дополнительный отступ сверху */
+}
+
+#menu-button {
+	background-color: #4CAF50;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+#header-tabs {
+	display: none; /* Скрытие элемента */
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+	background-color: #f1f1f1;
+	border: 1px solid #ddd;
+	padding: 10px;
+}
+
+#header-tabs.show {
+	display: block; /* Блочное отображение */
+	opacity: 1;
+}
+
+hr {
+	width: 100%;
+	border: 3px solid #00ff00;
+}
+
+h1 {
+	text-align: center;
+}
+
+h2 {
+	text-align: center;
+}
+
+.slider-main {
+	position: relative;
+	width: 100%;
+	max-width: 900px;
+	margin: auto;
+}
+
+.slides-main {
+	overflow: hidden;
+	position: relative;
+	display: flex;
+}
+
+.slide-main {
+	min-width: 100%;
+	overflow: hidden;
+	transition: all 0.5s ease-in-out;
+}
+
+.slide-main img {
+	width: 100%;
+	height: auto;
+	max-height: 500px;
+}
+
+.hidden {
+	display: none;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}
+
+.visible {
+	display: block;
+	opacity: 1;
+}
+
+.arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.prev {
+	left: 10px;
+}
+
+.next {
+	right: 10px;
+}
+
+.text-block-main {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	padding: 20px;
+	max-width: 80%;
+}
+
+/* Анимация для переключения слайдов влево */
+@keyframes slideInFromLeft {
+	0% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+/* Анимация для переключения слайдов вправо */
+@keyframes slideInFromRight {
+	0% {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+/* Применение анимации к слайдам при добавлении соответствующих классов */
+.slide-next.visible {
+	animation: slideInFromRight 1s forwards;
+}
+
+.slide-prev.visible {
+	animation: slideInFromLeft 1s forwards;
+}
+
+.slider-animal {
+	position: relative;
+	width: 100%;
+	max-width: 900px;
+	margin: auto;
+}
+
+.slides-animal {
+	overflow: hidden;
+	position: relative;
+	display: flex;
+}
+
+.slide-animal {
+	min-width: 100%;
+	overflow: hidden;
+	transition: all 0.5s ease-in-out;
+}
+
+.slide-animal img {
+	width: 100%;
+	height: auto;
+	max-height: 500px;
+}
+
+.text-block-animal {
+	position: absolute;
+	bottom: 20px;
+	right: 20px; /* Изменено с left на right */
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	padding: 20px;
+	font-size: 24px; /* Увеличен размер шрифта */
+	max-width: 300px; /* Установлен максимальный размер блока */
+	cursor: pointer; /* Добавлен указатель курсора */
+}
+
+.centered-text {
+	font-size: 18px; /* Увеличение размера шрифта */
+    line-height: 1.6; /* Увеличение интервала между строками */
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.email-link {
+    color: #333; /* Цвет текста */
+    text-decoration: underline; /* Подчеркивание текста */
+    font-weight: bold; /* Жирный шрифт */
+}
