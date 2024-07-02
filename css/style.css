@@ -23,21 +23,28 @@
 }
 
 .footer {
+	position: relative;
+	bottom: 0;
+	left: 0;
+	width: 100%;
     padding: 20px 0;
     border-top: 1px solid #e7e7e7;
     background-color: #f2f2f2;
     color: #333;
     text-align: center;
-    margin-top: 50px; /* Дополнительный отступ сверху */
 }
 
 #menu-button {
+	position: relative;
+	top: 0;
+	left: 0;
 	background-color: #4CAF50;
 	color: white;
 	padding: 10px 20px;
 	border: none;
 	cursor: pointer;
 	font-size: 16px;
+	z-index: 1;
 }
 
 #header-tabs {
@@ -47,6 +54,7 @@
 	background-color: #f1f1f1;
 	border: 1px solid #ddd;
 	padding: 10px;
+	margin-top: 2px;
 }
 
 #header-tabs.show {
@@ -56,15 +64,15 @@
 
 hr {
 	width: 100%;
-	border: 3px solid #00ff00;
+	border: none;
+	background-color: #e7e7e7;
+	height: 1px;
 }
 
-h1 {
-	text-align: center;
-}
-
-h2 {
-	text-align: center;
+h1, h2, h3 {
+	text-align: center; /* Выравнивание по центру */
+	font-size: 25px; /* Уменьшите размер шрифта */
+    margin-top: 30px; /* Добавьте отступ сверху */
 }
 
 .slider-main {
@@ -75,8 +83,11 @@ h2 {
 }
 
 .slides-main {
-	overflow: hidden;
 	position: relative;
+	overflow: hidden;
+	width: 100%;
+	max-width: 850px;
+	margin: auto;
 	display: flex;
 }
 
@@ -87,15 +98,13 @@ h2 {
 }
 
 .slide-main img {
-	width: 100%;
-	height: auto;
-	max-height: 500px;
+	width: 900px; /* Фиксированная ширина изображений */
+    height: 500px; /* Фиксированная высота изображений */
+	
 }
 
 .hidden {
 	display: none;
-	opacity: 0;
-	transition: opacity 0.5s ease;
 }
 
 .visible {
@@ -167,7 +176,7 @@ h2 {
 .slider-animal {
 	position: relative;
 	width: 100%;
-	max-width: 900px;
+	max-width: 850px;
 	margin: auto;
 }
 
@@ -213,4 +222,139 @@ h2 {
     color: #333; /* Цвет текста */
     text-decoration: underline; /* Подчеркивание текста */
     font-weight: bold; /* Жирный шрифт */
+}
+
+/* Общие стили сайта */
+body {
+    font-family: 'Arial', sans-serif;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.content-title {
+    margin-left: 2%; /* Отступ слева */
+    font-size: 20px;
+    color: #333; /* Темный цвет текста */
+    border-bottom: 2px solid #333; /* Подчеркивание заголовка */
+    margin-bottom: 0;
+	display: inline-block;
+	background-color: #f2f2f2; /* Цвет фона */
+    border-radius: 10px; /* Скругление углов */
+    padding: 10px; /* Отступ внутри элемента */
+}
+
+#animal-list {
+    list-style-type: disc;
+    padding-left: 30px;
+	margin-left: 5%;
+	background-color: #f2f2f2; /* Цвет фона */
+    border-radius: 10px; /* Скругление углов */
+    padding: 5px; /* Отступ внутри элемента */
+    max-width: 600px; /* Максимальная ширина */
+	margin-top: 0;
+	margin-bottom: 5px; /* Добавление небольшого отступа между пунктами */
+}
+
+#animal-list li a {
+    text-decoration: none;
+    color: #333; /* Темный цвет текста */
+    font-weight: bold;
+}
+
+#animal-list li a:hover {
+    color: #0078d7; /* Цвет при наведении */
+	border-radius: 5px; /* Скругление углов для эффекта выделения */
+    transition: background-color 0.3s; /* Плавное изменение фона */
+}
+
+.animal-section {
+	overflow: auto;
+	margin: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+	position: relative;
+    margin-bottom: 20px;
+	padding-left: 0;
+}
+
+.animal-container {
+    display: block; /* Использование флексбокса */
+    align-items: center; /* Центрирование элементов по вертикали */
+    justify-content: flex-start; /* Распределение пространства между элементами */
+}
+
+.animal-container img {
+	width: 400px; /* Установите желаемую ширину изображения */
+    height: auto;
+    margin-right: 20px;
+    border-radius: 4px;
+	float: left;
+}
+
+.animal-description {
+    text-align: justify;
+	flex-grow: 1;
+}
+
+.animal-description h3 {
+	color: #333;
+    font-size: 24px; /* Крупный подзаголовок */
+    margin-bottom: 10px; /* Отступ после подзаголовка */
+}
+
+.animal-description p {
+    text-align: justify; /* Выравнивание текста по ширине */
+	font-size: 16px;
+    line-height: 1.6;
+	margin-bottom: 15px; /* Добавлен отступ снизу для выделения абзацев */
+    text-indent: 30px; /* Добавлено текстовое углубление для первой строки абзаца */
+}
+
+.animal-description ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.animal-description li {
+    margin-bottom: 5px;
+}
+
+/* Дополнительные стили для адаптивности и красоты */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+		align-items: flex-start;
+    }
+
+    .sidebar,
+    .main-content {
+        width: 100%;
+    }
+	
+	/* Добавлены стили для .animal-container img для адаптивности */
+    .animal-container img {
+		width: 100%; /* Изображение занимает всю ширину контейнера на мобильных устройствах */
+        float: none; /* Убираем обтекание для мобильных устройств */ 
+		margin-bottom: 20px;
+	}
+	
+	.animal-description {
+        text-align: left;
+    }
+}
+
+/* Стили для кнопки "Наверх" */
+.go-top {
+    text-decoration: none;
+    display: block;
+    transition: opacity 0.3s;
+    font-size: 60px; /* Размер шрифта соответствует размеру стрелки */
+    line-height: 60px; /* Высота строки соответствует размеру стрелки */
+}
+
+.go-top:hover {
+    opacity: 0.7;
 }

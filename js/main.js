@@ -51,9 +51,39 @@ document.addEventListener('DOMContentLoaded', function() {
         changeSlideAnimal(currentSlideAnimal + 1);
     });
 
+	// Функция для перехода к определенному животному на странице animal.html
+	function goToAnimal(animalId) {
+	  window.location.href = 'animal.html#' + animalId;
+	}
+
+	// Добавляем обработчики событий для текстовых блоков животных
+    var animalLinks = document.querySelectorAll('.slider-animal .text-block-animal a');
+    animalLinks.forEach(function(link, index) {
+        link.addEventListener('click', function() {
+            goToAnimal('animal' + (index + 1));
+        });
+    });
+
     // Инициализация видимости слайдов и текстовых блоков
     updateVisibility(slidesMain, currentSlideMain);
     updateVisibility(textBlocksMain, currentSlideMain);
     updateVisibility(slidesAnimal, currentSlideAnimal);
     updateVisibility(textBlocksAnimal, currentSlideAnimal);
 });
+
+// JavaScript для отображения кнопки при прокрутке страницы
+window.addEventListener('scroll', function() {
+    var goTopButton = document.querySelector('.go-top');
+    if (window.pageYOffset > 100) {
+        goTopButton.style.display = 'block';
+    } else {
+        goTopButton.style.display = 'none';
+    }
+});
+
+// JavaScript для плавной прокрутки наверх при нажатии на кнопку
+document.querySelector('.go-top').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
