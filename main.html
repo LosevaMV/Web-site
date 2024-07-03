@@ -1,25 +1,26 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FunnyZoo - Главная</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>
-<div class="main-content">
+<body style="background: url('img/back1.jpg') no-repeat center center scroll; background-size: cover;">
 	<button id="menu-button">Меню</button>
-	<div id="header-tabs">
+    <div id="header-tabs">
 		<header>
 			<nav>
 				<ul>
 					<li><a href="main.html">Главная</a></li>
 					<li><a href="animal.html">Животные</a></li>
-					<li><a href="tickets.html">Билеты</a></li>
-					<li><a href="contacts.html">Контакты</a></li>
+					<li><a href="tickets.html">Билеты и мероприятия</a></li>
+					<li><a href="about.html">О нас</a></li>
 				</ul>
 			</nav>
 		</header>	
 	</div>
 	<h1 align="center">Добро пожаловать в зоопарк FunnyZoo!</h1>
+<div class="main-content">
     <div class="slider-main">
 	  <div class="slides-main">
 		<div class="slide-main">
@@ -129,11 +130,21 @@
 		<div class="arrow next" onclick="changeSlideAnimal(currentSlideAnimal + 1)">&#10095;</div>
 	</div>
  </div>
+	<!-- Кнопка "Наверх" с использованием символа Unicode для стрелки -->
+	<a href="#" class="go-top" style="position: fixed; bottom: 20px; right: 20px; display: none; z-index=1;">
+		&#8679; <!-- Символ Unicode для стрелки вверх -->
+	</a>
     <footer class="footer">
     <div class="header-info">
         <p id="address-link">Адрес: Улица Зоопарковая, 1, Москва</p>
         <p>Часы работы: Пн-Вс с 9:00 до 20:00</p>
         <p>Телефон: +7 (495) 123-45-67</p>
+    </div>
+	<div class="social-links">
+        <!-- Ссылки на социальные сети или другие контакты -->
+        <a href="https://www.vk.com/funnyzoo" target="_blank">ВКонтакте</a>
+        <a href="https://www.ok.ru/funnyzoo" target="_blank">Одноклассники</a>
+        <a href="https://www.dzen.ru/funnyzoo" target="_blank">Дзен</a>
     </div>
     <p>Свяжитесь с нами: <a href="mailto:info@funnyzoo.com" class="email-link">info@funnyzoo.com</a></p>
 	</footer>

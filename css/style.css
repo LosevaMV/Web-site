@@ -1,3 +1,8 @@
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 .header-info {
 	background-color: #f2f2f2;
 	padding: 10px 0;
@@ -9,6 +14,7 @@
 	text-align: center;
 	background-color: #f2f2f2;
 	color: #333;
+	padding: 10px 0;
 }
 
 .social-links a,
@@ -18,7 +24,16 @@
 	color: #333;
 }
 
+.footer a:hover {
+    color: #66bb6a; 
+}
+
 .main-content {
+	font-family: 'Times New Roman', sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
     margin-bottom: 50px; /* Установка отступа перед футером */
 }
 
@@ -55,6 +70,8 @@
 	border: 1px solid #ddd;
 	padding: 10px;
 	margin-top: 2px;
+	animation: fadeIn 1s ease-in-out forwards;
+	opacity: 0;
 }
 
 #header-tabs.show {
@@ -70,9 +87,15 @@ hr {
 }
 
 h1, h2, h3 {
-	text-align: center; /* Выравнивание по центру */
-	font-size: 25px; /* Уменьшите размер шрифта */
-    margin-top: 30px; /* Добавьте отступ сверху */
+	font-size: 24px; /* Увеличенный размер шрифта */
+    color: #333333; /* Темно-серый цвет текста */
+    text-align: center; /* Выравнивание по центру */
+    background-color: #f2f2f2; /* Светло-серый цвет фона */
+    padding: 10px; /* Отступы вокруг текста */
+    border-radius: 5px; /* Скругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень под заголовком */
+    margin-top: 20px; /* Отступ сверху */
+    margin-bottom: 20px; /* Отступ снизу */
 }
 
 .slider-main {
@@ -226,7 +249,7 @@ h1, h2, h3 {
 
 /* Общие стили сайта */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Times New Roman', sans-serif;
     display: block;
     margin: 0;
     padding: 0;
@@ -297,6 +320,7 @@ body {
 .animal-description {
     text-align: justify;
 	flex-grow: 1;
+	padding-left: 20px;
 }
 
 .animal-description h3 {
@@ -353,8 +377,131 @@ body {
     transition: opacity 0.3s;
     font-size: 60px; /* Размер шрифта соответствует размеру стрелки */
     line-height: 60px; /* Высота строки соответствует размеру стрелки */
+    z-index: 1000; /* Установлено большое значение для z-index */
 }
 
 .go-top:hover {
     opacity: 0.7;
+}
+
+/* Стили для невидимой таблицы */
+.invisible-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.invisible-table th,
+.invisible-table td {
+    border: 1px solid transparent; /* Невидимые границы */
+    padding: 10px;
+    text-align: left;
+}
+
+.invisible-table th {
+    background-color: #f2f2f2; /* Цвет фона для заголовков */
+}
+
+form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для полей ввода и текстовой области */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Стили для кнопок */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #5cb85c;
+    color: white;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+/* Основные стили для светло-зеленых оттенков */
+body, .header-info, .social-links, .footer, .main-content, #header-tabs, .slider-main, .slides-main, .slider-animal, .slides-animal, .centered-text, .content-title, #animal-list, .animal-section, form {
+    background-color: #e8f5e9; /* Светло-зеленый цвет фона */
+}
+
+/* Стили для текста, чтобы он был читаемым */
+body, h1, h2, h3, .main-content, .footer, .centered-text, .content-title, .animal-description, form {
+    color: #424242; /* Темно-серый цвет текста для лучшей читаемости */
+}
+
+/* Стили для ссылок */
+a, .social-links a, .footer a, #animal-list li a {
+    color: #1b5e20; /* Темно-зеленый цвет текста для ссылок */
+}
+
+/* Стили для кнопок */
+button, #menu-button {
+    background-color: #81c784; /* Светло-зеленый цвет кнопок */
+    color: white; /* Белый цвет текста на кнопках */
+}
+
+button:hover, #menu-button:hover {
+    background-color: #66bb6a; /* Немного темнее оттенок зеленого для эффекта при наведении */
+}
+
+/* Стили для отступов в содержании */
+.main-content, .animal-description {
+    padding: 20px; /* Добавление отступа для текстового содержимого */
+}
+
+/* Стили для списка животных, чтобы пункты были в зоне блока */
+#animal-list {
+    padding: 20px; /* Увеличение отступа внутри списка */
+    background-color: #c8e6c9; /* Немного более светлый оттенок зеленого для фона списка */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавление тени для списка */
+}
+
+.video-container {
+    position: relative;
+    width: 100%; /* Ширина контейнера видео */
+    height: auto; /* Высота контейнера видео */
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+}
+
+.video-overlay p {
+    color: white; /* Цвет текста надписи */
+    font-size: 2em; /* Размер шрифта надписи */
+    text-align: center;
+}
+
+.welcome-section img {
+    max-width: 100%;
+    height: auto;
 }
