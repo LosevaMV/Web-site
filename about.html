@@ -1,0 +1,101 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>FunnyZoo - О нас</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body style="background: url('img/back1.jpg') no-repeat center center scroll; background-size: cover;">
+	<button id="menu-button">Меню</button>
+	<div id="header-tabs">
+		<header>
+			<nav>
+				<ul>
+					<li><a href="main.html">Главная</a></li>
+					<li><a href="animal.html">Животные</a></li>
+					<li><a href="tickets.html">Билеты и мероприятия</a></li>
+					<li><a href="about.html">О нас</a></li>
+				</ul>
+			</nav>
+		</header>	
+	</div>
+	<h1 align="center">Присоединяйся в нашу дружную команду!</h1>
+<div class="main-content">
+	<!-- Приветственный текст -->
+    <section class="welcome-section">
+        <p align="center">Мы всегда рады новым талантам и ищем людей, которые разделяют нашу страсть к животным и природе.</p>
+        <!-- Фото команды -->
+        <img src="img/about.jpg" alt="Наша команда">
+		<p>Заполняй анкету ниже - не упусти свой шанс!</p>
+    </section>
+	<!-- Форма анкеты для приёма на работу -->
+    <form id="job-application-form">
+        <h3>Анкета для приёма на работу</h3>
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        
+        <label for="position">Желаемая должность:</label>
+        <select id="position" name="position" required>
+            <option value="">Выберите должность</option>
+            <option value="keeper">Смотритель</option>
+            <option value="vet">Ветеринар</option>
+            <option value="manager">Менеджер</option>
+        </select><br>
+		
+        <label for="about">О себе:</label>
+        <textarea id="about" name="about" required></textarea><br>
+        
+        <!-- Кнопки отправки данных и сброса -->
+        <button type="submit">Отправить</button>
+        <button type="reset">Сбросить</button>
+    </form>
+</div>
+	<!-- Кнопка "Наверх" с использованием символа Unicode для стрелки -->
+	<a href="#" class="go-top" style="position: fixed; bottom: 20px; right: 20px; display: none; z-index=1;">
+		&#8679; <!-- Символ Unicode для стрелки вверх -->
+	</a>
+	<footer class="footer">
+    <div class="header-info">
+        <p id="address-link">Адрес: Улица Зоопарковая, 1, Москва</p>
+        <p>Часы работы: Пн-Вс с 9:00 до 20:00</p>
+        <p>Телефон: +7 (495) 123-45-67</p>
+    </div>
+	<div class="social-links">
+        <!-- Ссылки на социальные сети или другие контакты -->
+        <a href="https://www.vk.com/funnyzoo" target="_blank">ВКонтакте</a>
+        <a href="https://www.ok.ru/funnyzoo" target="_blank">Одноклассники</a>
+        <a href="https://www.dzen.ru/funnyzoo" target="_blank">Дзен</a>
+    </div>
+    <p>Свяжитесь с нами: <a href="mailto:info@funnyzoo.com" class="email-link">info@funnyzoo.com</a></p>
+	</footer>
+	<script src="js/main.js"></script>
+	<script>
+	    // Ваш JavaScript код
+        document.getElementById('menu-button').addEventListener('click', function() {
+            var headerTabs = document.getElementById('header-tabs');
+            headerTabs.classList.toggle('show');
+        });
+		// JavaScript для открытия карты при нажатии на адрес
+		document.getElementById('address-link').addEventListener('click', function() {
+			window.open('https://www.google.com/maps/place/Улица+Зоопарковая,+1,+Москва');
+		});
+		// Скрипт проверки заполнения формы и наличия символа @ в поле email
+		document.getElementById('job-application-form').addEventListener('submit', function(event) {
+			event.preventDefault(); // Предотвращаем отправку формы
+			var name = document.getElementById('name').value;
+			var email = document.getElementById('email').value;
+			var position = document.getElementById('position').value;
+			var about = document.getElementById('about').value;
+			
+			if(name && email.includes('@') && position && about) {
+				// Здесь можно добавить код для отправки данных на сервер
+				alert('Ваша анкета успешно отправлена!');
+			} else {
+				alert('Пожалуйста, заполните все поля и убедитесь, что email содержит символ @.');
+			}
+		});
+    </script>
+</body>
+</html>
